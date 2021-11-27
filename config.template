@@ -36,6 +36,9 @@ radio profile radio_prof_ac band-steering mode prefer-5g
 radio profile radio_prof_ac tx-beamforming auto
 radio profile radio_prof_ac frameburst
 
+interface wifi0 radio profile radio_prof_n
+interface wifi1 radio profile radio_prof_ac
+
 interface wifi1 radio channel 36
 interface mgt0 hive ah_hive
 
