@@ -19,20 +19,21 @@ hive ah_hive
 hive ah_hive password "{{ .HivePsk }}"
 
 radio profile radio_prof_n
+radio profile radio_prof_n phymod 11ng
 radio profile radio_prof_n short-guard-interval
 radio profile radio_prof_n band-steering enable
 radio profile radio_prof_n weak-snr-suppress enable
 radio profile radio_prof_n band-steering mode prefer-5g
 radio profile radio_prof_n frameburst
-radio profile radio_prof_n
 
 radio profile radio_prof_ac
 radio profile radio_prof_ac phymode 11ac
-radio profile radio_prof_ac channel-width 40
+radio profile radio_prof_ac benchmark phymode 11ac rate 48 success 95 usage 75
+radio profile radio_prof_ac channel-width 80
+radio profile radio_prof_ac dynamic-channel-width enable
 radio profile radio_prof_ac short-guard-interval
 radio profile radio_prof_ac dfs
 radio profile radio_prof_ac band-steering enable
-radio profile radio_prof_ac client-load-balance enable
 radio profile radio_prof_ac weak-snr-suppress enable
 radio profile radio_prof_ac band-steering mode prefer-5g
 radio profile radio_prof_ac tx-beamforming auto
